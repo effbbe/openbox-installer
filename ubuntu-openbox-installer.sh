@@ -13,10 +13,9 @@ xscreensaver-gl xfce4-power-manager pulseaudio network-manager pavucontrol nitro
 network-manager-gnome
 echo "Install success with no errors =)"
 
-$user=(whoami)
 #Configuring openbox, autostart & menu 
 echo "Create Openbox Directory"
-mkdir -p /home/$user/.config/openbox && cd /home/$user/.config/openbox
+mkdir -p /home/$USER/.config/openbox && cd /home/$USER/.config/openbox
 echo "Copying autostart file"
 https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/autostart
 echo "Copying rc.xml"
