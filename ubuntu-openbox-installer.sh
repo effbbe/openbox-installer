@@ -13,6 +13,7 @@ xscreensaver-gl xfce4-power-manager pulseaudio network-manager pavucontrol nitro
 network-manager-gnome
 echo "Install success with no errors =)"
 
+$user=(whoami)
 #Configuring openbox, autostart & menu 
 echo "Create Openbox Directory"
 mkdir -p /home/$user/.config/openbox && cd /home/$user/.config/openbox
