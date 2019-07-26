@@ -1,18 +1,8 @@
-#!/bin/bash
-if [ -z "$SUDO_USER" ]
-  then 
-  echo "\$SUDO_USER is empty. Using $(ls /home)"
-  SUDO_USER=(ls /home)
- fi
+## Updating repository
+echo "Updating Repositories"
+sudo apt-get update && apt-get upgrade
+echo 'Update success'
 
-#Turn those space separated list into bash arrays
-SUDO_USER=($SUDO_USER)
-
-DEBIAN_FRONTEND=noninteractive apt -y sudo
-for user in  $SUDO_USER
-do
-  adduser $user sudo
-done
 
 ## Installing openbox and supporting applications
 echo "Installing openbox and supporting applications"
@@ -25,11 +15,12 @@ echo "Install success with no errors =)"
 
 #Configuring openbox, autostart & menu 
 echo "Create Openbox Directory"
-mkdir -p ~/.config/openbox && cd ~/.config/openbox
+mkdir -p /home/$user/.config/openbox && cd /home/$user/.config/openbox
 echo "Copying autostart file"
-wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/autostart
+https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/autostart
 echo "Copying rc.xml"
-wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/rc.xml
+https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/rc.xml
 echo "Copying menu.xml"
-wget https://raw.githubusercontent.com/randalltuxarc/openbox-installer-kali-linux/master/misc/menu.xml
+https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/menu.xml
 echo "Copying file success"
+
