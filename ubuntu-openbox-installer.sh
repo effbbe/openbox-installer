@@ -3,14 +3,47 @@ echo "Updating Repositories"
 sudo apt-get update && apt-get upgrade
 echo 'Update success'
 
+clear
+
+## Installing openbox
+echo "Installing openbox and support openbox application"
+sudo apt-get install -y openbox obsession obconf obmenu xorg xserver-xorg \
+cifs-utils gvfs-backends policykit-1-gnome
+echo "Install success with no errors =)"
 
 ## Installing openbox and supporting applications
-echo "Installing openbox and supporting applications"
-sudo apt-get install -y openbox obsession obconf obmenu xorg xserver-xorg lightdm \
-lightdm-gtk-greeter lightdm-gtk-greeter-settings gnome-terminal lxappearance tint2 \
-gmrun cifs-utils gvfs-backends policykit-1-gnome gnome-icon-theme-full volumeicon-alsa xscreensaver \
-xscreensaver-gl xfce4-power-manager pulseaudio network-manager pavucontrol nitrogen \
-network-manager-gnome
+##echo "Installing openbox and supporting applications"
+##sudo apt-get install -y openbox obsession obconf obmenu xorg xserver-xorg lightdm \
+##lightdm-gtk-greeter lightdm-gtk-greeter-settings gnome-terminal lxappearance tint2 \
+##gmrun cifs-utils gvfs-backends policykit-1-gnome gnome-icon-theme-full volumeicon-alsa xscreensaver \
+##xscreensaver-gl xfce4-power-manager pulseaudio network-manager pavucontrol nitrogen \
+##network-manager-gnome
+##echo "Install success with no errors =)"
+
+# Installing display desktop manager
+echo "Installing lightdm"
+sudo apt-get -y lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+echo "Install success with no errors =)"
+
+clear
+
+# Installing display network manager
+echo "Installing network manager"
+sudo apt-get -y network-manager network-manager-gnome
+echo "Install success with no errors =)"
+
+clear
+
+# Installing sound manager
+echo "Installing sound manager"
+sudo apt-get -y pulseaudio pulseaudio-equalizer pavucontrol
+echo "Install success with no errors =)"
+
+clear
+
+# Installing power manager and screensaver
+echo "Installing power manager and screensaver"
+sudo apt-get -y xscreensaver xscreensaver-gl xfce4-power-manager
 echo "Install success with no errors =)"
 
 clear
