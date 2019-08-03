@@ -62,6 +62,15 @@ echo "Install success with no errors =)"
 
 clear
 
+# Installing printer screen resolution management
+echo "Installing compton for compositor and transparancy"
+sudo apt-get -y compton
+mkdir -p /home/$USER/.config/compton
+wget -P /home/$USER/.config/compton https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/compton.conf
+echo "Install success with no errors =)"
+
+clear
+
 #Configuring openbox for current user
 echo "Create Openbox Directory"
 mkdir -p /home/$USER/.config/openbox
@@ -71,7 +80,9 @@ echo "Copying rc.xml"
 wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/rc.xml
 echo "Copying menu.xml"
 wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/menu.xml
-echo "Copying file success"
+echo "Copying environment file"
+wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/environment
+
 
 clear
 
