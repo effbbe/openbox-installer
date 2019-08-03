@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>gmrun</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>leafpad</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="root-menu-23105" label="Accessories">
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>gnome-calculator</execute>
+				</action>
+			</item>
+			<item label="FileRoller">
+				<action name="Execute">
+					<execute>file-roller</execute>
+				</action>
+			</item>
+			<item label="Leafpad">
+				<action name="Execute">
+					<execute>leafpad</execute>
+				</action>
+			</item>
+			<item label="Nomacs">
+				<action name="Execute">
+					<execute>nomacs</execute>
+				</action>
+			</item>
+			<menu id="root-menu-23105-24563" label="Scrot">
+				<item label="Take Screenshot">
+					<action name="Execute">
+						<execute>scrot '/home/legawa/Pictures/Screenshot/image_%m%d %y-%T.jpg'</execute>
+					</action>
+				</item>
+				<item label="Countdown Screenshot">
+					<action name="Execute">
+						<execute>scrot --delay 5 '/home/legawa/Pictures/Screenshot/image_%m%d %y-%T.jpg'</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Terminal">
+				<action name="Execute">
+					<execute>x-terminal-emulator</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-77030" label="Audio Video">
+			<item label="Clementine">
+				<action name="Execute">
+					<execute>clementine</execute>
+				</action>
+			</item>
+			<item label="VLC">
+				<action name="Execute">
+					<execute>vlc</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-64359" label="Internet">
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>firefox-esr</execute>
+				</action>
+			</item>
+			<item label="TeamViewer">
+				<action name="Execute">
+					<execute>teamviewer</execute>
+				</action>
+			</item>
+			<item label="Transmission">
+				<action name="Execute">
+					<execute>transmission-gtk</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="root-menu-473812" label="Place">
+			<item label="Documents">
+				<action name="Execute">
+					<execute>thunar /home/legawa/Documents/</execute>
+				</action>
+			</item>
+			<item label="Downloads">
+				<action name="Execute">
+					<execute>thunar /home/legawa/Downloads/</execute>
+				</action>
+			</item>
+			<item label="Music">
+				<action name="Execute">
+					<execute>thunar /home/legawa/Music/</execute>
+				</action>
+			</item>
+			<item label="Pictures">
+				<action name="Execute">
+					<execute>thunar /home/legawa/Pictures/</execute>
+				</action>
+			</item>
+			<item label="Videos">
+				<action name="Execute">
+					<execute>thunar /home/legawa/Videos/</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="root-menu-245628" label="Openbox">
+			<item label="Edit menu.xml">
+				<action name="Execute">
+					<execute>leafpad ~/.config/openbox/menu.xml</execute>
+				</action>
+			</item>
+			<item label="Edit rc.xml">
+				<action name="Execute">
+					<execute>leafpad ~/.config/openbox/rc.xml</execute>
+				</action>
+			</item>
+			<item label="Edit autostart">
+				<action name="Execute">
+					<execute>leafpad ~/.config/openbox/autostart</execute>
+				</action>
+			</item>
+			<separator/>
+			<item label="Menu Editor">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="WM Preferences">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<menu id="root-menu-245628-325549" label="Conky">
+				<menu id="root-menu-245628-325549-175558" label="Conky Config">
+					<item label="Edit Conky">
+						<action name="Execute">
+							<execute>leafpad /home/legawa/.conky/.conkyrc</execute>
+						</action>
+					</item>
+				</menu>
+			</menu>
+			<menu id="root-menu-245628-442219" label="Tint2">
+				<item label="Configure Tint2">
+					<action name="Execute">
+						<execute>tint2conf</execute>
+					</action>
+				</item>
+				<item label="Edit tintrc">
+					<action name="Execute">
+						<execute>leafpad ~/.config/tint2/tint2rc</execute>
+					</action>
+				</item>
+			</menu>
+			<separator/>
+			<item label="Reconfigure">
+				<action name="Execute">
+					<execute>openbox --reconfigure</execute>
+				</action>
+			</item>
+			<item label="Restart">
+				<action name="Execute">
+					<execute>openbox --restart</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-921312" label="System Setting">
+			<item label="Printer">
+				<action name="Execute">
+					<execute>system-config-printer</execute>
+				</action>
+			</item>
+			<item label="Font Manager">
+				<action name="Execute">
+					<execute>font-manager</execute>
+				</action>
+			</item>
+			<item label="Appearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item label="Wallpaper">
+				<action name="Execute">
+					<execute>nitrogen</execute>
+				</action>
+			</item>
+			<item label="Power Management">
+				<action name="Execute">
+					<execute>xfce4-power-manager-settings</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Exit">
+			<action name="Execute">
+				<execute>/usr/local/sbin/exitbox.sh</execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>
