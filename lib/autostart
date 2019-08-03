@@ -1,1 +1,10 @@
 
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+xcompmgr -cC -t-3 -1-5 -r5 &
+(sleep 1s && tint2) &
+nitrogen --restore &
+xmodmap  -e "pointer = 1 0 3" &
+(sleep 20s && volumeicon) &
+(sleep 5s && xscreensaver-command -activate) &
+(sleep 5s && ~/bin/keyboardconf) &
+xfce4-power-manager &
