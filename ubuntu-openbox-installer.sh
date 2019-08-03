@@ -8,7 +8,7 @@ clear
 ## Installing openbox
 echo "Installing openbox and support openbox application"
 sudo apt-get install -y openbox obsession obconf obmenu xorg xserver-xorg \
-cifs-utils gvfs-backends policykit-1-gnome
+cifs-utils gvfs-backends policykit-1-gnome gmrun
 echo "Install success with no errors =)"
 
 ## Installing openbox and supporting applications
@@ -43,20 +43,34 @@ clear
 
 # Installing power manager and screensaver
 echo "Installing power manager and screensaver"
-sudo apt-get -y xscreensaver xscreensaver-gl xfce4-power-manager
+sudo apt-get -y xscreensaver xscreensaver-gl xfce4-power-manager xfce4-power-manager-plugins
+echo "Install success with no errors =)"
+
+clear
+
+# Installing tint2
+echo "Installing panel"
+sudo apt-get -y tint2
+echo "Install success with no errors =)"
+
+clear
+
+# Installing compositor
+echo "Installing compton for compositor and transparancy"
+sudo apt-get -y compton
 echo "Install success with no errors =)"
 
 clear
 
 #Configuring openbox for current user
 echo "Create Openbox Directory"
-mkdir -p /home/$USER/.config/openbox && cd /home/$USER/.config/openbox
+mkdir -p /home/$USER/.config/openbox
 echo "Copying autostart file"
-wget https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/autostart
+wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/autostart
 echo "Copying rc.xml"
-wget https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/rc.xml
+wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/rc.xml
 echo "Copying menu.xml"
-wget https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/menu.xml
+wget -P /home/$USER/.config/openbox https://raw.githubusercontent.com/legawa1701/openbox-installer/master/lib/menu.xml
 echo "Copying file success"
 
 clear
