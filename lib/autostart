@@ -1,10 +1,25 @@
 
-/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-xcompmgr -cC -t-3 -1-5 -r5 &
+#enable policykit gnome auth for thunar mount
+usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
+#run compositor
+compton --config path/to/compton.conf.
+
+#show tint2 panel
 (sleep 1s && tint2) &
+
+#restore wallpaper
 nitrogen --restore &
+
 xmodmap  -e "pointer = 1 0 3" &
+
+#show volumeicon on tint2 systray
 (sleep 20s && volumeicon) &
+
+#enable screensaver
 (sleep 5s && xscreensaver-command -activate) &
+
 (sleep 5s && ~/bin/keyboardconf) &
+
+#enable power management and show battery status on tint2 systray
 xfce4-power-manager &
