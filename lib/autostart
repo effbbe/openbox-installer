@@ -3,7 +3,7 @@
 usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 #run compositor
-compton --config path/to/compton.conf.
+compton --config /home/$USER/.config/compton
 
 #show tint2 panel
 (sleep 1s && tint2) &
